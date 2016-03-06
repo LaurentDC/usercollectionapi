@@ -1,0 +1,23 @@
+TODO : 
+- Scan folders
+- When New User : Create Default Collection > Create Undefined Category with ID = 0
+- When New Collection : Create Undefined Category with ID = 0
+
+
+{
+  "_id": ObjectId("56ae32faec810b5c045484cc"),
+  "name": "myCollection",
+  "userId": ObjectId("569142ace72ed2a80380bdfb"),
+  "userItems": [
+    ObjectId("56c9efd4701b1ead0ee8b9e1"),
+    ObjectId("56929a82c7000833072df1f7"),
+    ObjectId("56929aaec7000833072df1f8"),
+    ObjectId("56929ad7c7000833072df1fb")
+  ],
+  "userCategories": [
+  	ObjectId("56929915c7000833072df1f5"),
+  	ObjectId("56929979c7000833072df1f6"),
+  	ObjectId("56c88923c06f310b64342fe1")
+  ],
+  "__v": 197
+}

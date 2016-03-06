@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Authentication</title>
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/font-awesome/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="container" style="padding-top: 20px;">
+			<div class="page-header text-center">
+				<h1><span class="fa fa-anchor"></span> User Profile</h1>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="well" style="padding-bottom: 40px;">
+						<h3><span class="fa fa-user"></span> Local</h3>
+						<p>
+							<strong>Id</strong> : <%= user.id %><br>
+							<strong>User Name</strong> : <%= user.local.username %><br>
+							<strong>Email</strong> : <%= user.local.email %><br>
+							<strong>Password</strong> : <%= user.local.password %>
+						</p>
+						<p>
+							<a href="/collection" class="btn btn-default btn-sm">Back To Collection</a>
+							<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
