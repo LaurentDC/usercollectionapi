@@ -1,10 +1,15 @@
 
-/*#searchbox {
-    margin-bottom: 12px;
-    margin-top: -40px;
-}*/
 .glyphicon-trash:before {
-	color: black;
+	color: #999;
+}
+.glyphicon-pencil:before {
+  color: #999;
+}
+.glyphicon-ok:before {
+  color: #63b283;
+}
+.glyphicon-remove:before {
+  color: #af6262;
 }
 .editItem {
 	width: 90px;
@@ -12,7 +17,16 @@
 .editSpace {
 	margin-top: 20px;
 }
-.inputText {
+.btn-new {
+  border-radius: 15px;
+}
+.col-xs-6 {
+  width: 40%;
+}
+.btnclose {
+  padding-left: 10px;
+}
+.inputText, #itemCategory {
 	text-transform: capitalize;
 }
 .form-control[disabled] {
@@ -22,7 +36,14 @@
 	box-shadow: none;
 	outline: none;
 }
-
+#searchbox {
+  border-radius: 15px;
+  background-color: #252525;  
+}
+.form-control {
+  border-radius: 15px;
+  background-color: #252525;  
+}
 select.form-control[disabled] {
   -moz-appearance: none;
    -webkit-appearance: none;
@@ -58,10 +79,7 @@ body {
 #navbar-inverse {
 	background-color: #222222;
 }
-#searchbox {
-	border-radius: 15px;
-	background-color: #252525;	
-}
+
 .input-group {
 	margin-right: 10px;
 }
@@ -247,13 +265,6 @@ body {
   position: relative;
 
 }
-.nav-tabs > li.active > a {
-  border: 0;
-  color: #fff;
-}
-/*.nav-tabs > li.active > a > i {
-  color: #404040;
-}*/
 .tab-content {
   margin-top: -3px;
   background-color: black;
@@ -266,18 +277,19 @@ body {
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
 	background-color: black;
+  border: 0;
+  color: #fff;
 }
 .table > thead {
 	color: #fff;
 }
-.table > tbody {
+.table > tbody > tr > td > input,  .table > tbody > tr > td > select {
 	color: #999;
 }
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
   background-color: #222;
 }
-
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-	border-color: #50514F;
+	border-color: #999;
 	padding: 10px 8px 8px 8px;
 }
