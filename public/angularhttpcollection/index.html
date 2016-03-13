@@ -1,0 +1,55 @@
+<html ng-app="collectify">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+
+  <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"> </script>
+  <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"> </script>
+
+  <script type="text/javascript" src="js/newapp.js"> </script>
+  <script type="text/javascript" src="routing.js"> </script>
+
+  <!-- Controllers -->
+  <script type="text/javascript" src="src/controllers/categoryController.js"> </script>
+  <script type="text/javascript" src="src/controllers/itemController.js"> </script>
+  <script type="text/javascript" src="src/controllers/userController.js"> </script>
+  
+  <!-- Directives -->
+  <script type="text/javascript" src="src/directives/itemDecoratorDirective.js"> </script>
+  <script type="text/javascript" src="src/directives/categoryDecoratorDirective.js"> </script>
+  <script type="text/javascript" src="src/directives/paginationDecoratorDirective.js"> </script>
+  <script type="text/javascript" src="src/directives/navbartopDecoratorDirective.js"> </script>
+  <script type="text/javascript" src="src/directives/sidebarDecoratorDirective.js"> </script>
+
+  <!-- Services -->
+  <script type="text/javascript" src="src/services/itemProvider.js"> </script>
+  <script type="text/javascript" src="src/services/categoryProvider.js"> </script>
+  <script type="text/javascript" src="src/services/userService.js"> </script>
+  <script type="text/javascript" src="src/services/collectionService.js"> </script>
+
+  <!-- Filters -->
+  <script type="text/javascript" src="src/filters/filters.js"> </script>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+
+    <div ng-view ng-controller="userController"></div>
+    </div>
+    <script type="text/javascript">
+      function togglemenu(){
+        var d = document.getElementById('wrapper');
+        var table = document.getElementById('tabledata');
+        if (d.className === 'active') {
+          d.className = '';
+          table.style.marginLeft = "0px";
+        } else {
+          d.className = 'active';
+          table.style.marginLeft = "35px";
+        };
+      };
+    </script>
+  </body>
+</html>

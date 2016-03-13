@@ -1,0 +1,38 @@
+<div ng-init="hideOnBlur = true">
+<!-- <div> -->
+	<ul class="nav nav-tabs">
+		<li ng-class="{'active':all == states.activeCategory}" ng-click="inputShow = false">
+		<a href="" ng-click="applyFilters(''); states.activeCategory=all">All</a>
+		</li>
+		<li ng-class="{'active':category.catId == states.activeCategory}" 
+			ng-repeat="category in categories | orderBy:'catId'" id="cat_{{$index+1}}">
+			<a href="" ng-click="applyFilters(category.catId); states.activeCategory=category.catId" 
+			class="inputText" ng-dblclick="showInput($index)" 
+			ng-hide="inputShow && index==$index && hideOnBlur"><div>{{category.name}}</div></a>
+		
+			<input type="text" ng-model="category.name" value="{{category.name}}" 
+			ng-disabled="false" class="form-control inputText" id="catName" 
+			ng-show="inputShow && index==$index && hideOnBlur" ng-blur="updateCategory(category)"/>
+		</li>
+		
+		<li ng-hide="categoryCreate">
+			<a href="" ng-click="categoryCreate = !categoryCreate; inputShow = false">+</a>
+		</li>
+		
+		<li ng-show="categoryCreate" class="categoryCreate">			
+			<div class="categoryCreateEdit">
+				<form class="form-inline">
+					<input type="text" class="form-control" id="categoryName" value="categoryName" ng-model="category.name" name="name" />
+					<a href="" ng-click="createCategory(category); categoryCreate = !categoryCreate" id="submit-btn" >
+						<span class='glyphicon glyphicon-ok'></span>
+					</a>
+				</form>
+			</div>
+			<div style="display: inline; padding-left: 10px;">
+				<a href="" ng-click="categoryCreate = !categoryCreate" id="close-btn" >
+					<span class='glyphicon glyphicon-remove'></span>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>	

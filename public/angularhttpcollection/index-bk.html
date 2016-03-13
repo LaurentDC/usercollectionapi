@@ -1,0 +1,51 @@
+<html ng-app="collectify">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+
+  <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"> </script>
+  <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"> </script>
+
+  <script type="text/javascript" src="js/newapp.js"> </script>
+  <script type="text/javascript" src="routing.js"> </script>
+
+  <!-- Controllers -->
+  <script type="text/javascript" src="src/controllers/categoryController.js"> </script>
+  <script type="text/javascript" src="src/controllers/itemController.js"> </script>
+  <script type="text/javascript" src="src/controllers/userController.js"> </script>
+  
+  <!-- Directives -->
+  <script type="text/javascript" src="src/directives/itemDecoratorDirective.js"> </script>
+  <script type="text/javascript" src="src/directives/categoryDecoratorDirective.js"> </script>
+  <script type="text/javascript" src="src/directives/paginationDecoratorDirective.js"> </script>
+
+  <!-- Services -->
+  <script type="text/javascript" src="src/services/itemProvider.js"> </script>
+  <script type="text/javascript" src="src/services/categoryProvider.js"> </script>
+  <script type="text/javascript" src="src/services/userService.js"> </script>
+  <script type="text/javascript" src="src/services/collectionService.js"> </script>
+
+  <!-- Filters -->
+  <script type="text/javascript" src="src/filters/filters.js"> </script>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="panel panel-default" style="margin-top: 20px;" ng-controller="userController">
+        <div class="panel-heading">
+          <h3 class="panel-title inputText">{{user.local.username}}'s Collection
+          <div style="float: right;">
+            <a href="" ng-click="getProfile()" >
+            <!-- <a href="" ng-click="getUserCollection()" >  -->
+            <span class='glyphicon glyphicon-user'></span>
+          </a>
+          </div>
+          </h3>
+        </div>
+        <div ng-view class="panel-body"></div>
+        </div>
+      </div>
+  </body>
+</html>

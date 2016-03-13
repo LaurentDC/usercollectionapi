@@ -1,0 +1,40 @@
+<!-- open /Applications/Google\ Chrome.app --args --allow-file-access-from-files -->
+
+var myCategories = [
+    {'catId': 1, 'name': 'Cinéma'},
+    {'catId': 2, 'name': 'Music'}
+];
+
+//Create Collection in Firebase
+        ref.set(myCategories, function(error) {
+            if(error) {
+                console.log('error', error);
+            } else {
+                console.log('categories created!');
+            }
+        })
+
+var myItems = [
+    {'itemId':1, 'title': 'Apocalypse Now', 'name': 'Francis Ford Coppola', 'category_id': 1},
+    {'itemId':2, 'title': 'Shrek', 'name': 'Andrew Adamson', 'category_id': 1},
+    {'itemId':3, 'title': 'Metro Manila', 'name': 'Sean Ellis', 'category_id': 1},
+    {'itemId':4, 'title': 'C\'est arrivé près de chez vous', 'name': 'Benoît Poelvoorde', 'category_id': 1},
+    {'itemId':5, 'title': 'So What', 'name': 'Miles Davis', 'category_id': 2},
+    {'itemId':6, 'title': 'Blue Train', 'name': 'John Coltrane', 'category_id': 2},
+    {'itemId':7, 'title': 'Blues and the Abstract Truth', 'name': 'Oliver Nelson', 'category_id': 2},
+    {'itemId':8, 'title': 'This is All Yours', 'name': 'Alt-J', 'category_id': 2}
+];
+
+// Create Collection in Firebase
+        var ref = new Firebase('https://myfirstcollection.firebaseio.com/items');
+        ref.set(myItems, function (error){
+            if(error) {
+                console.log('Error', error);
+            } else {
+                console.log('Items created !');
+            }
+        })
+
+
+
+TODO : Checked on item add
